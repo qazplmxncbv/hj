@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>카카오톡 버튼있는 메시지 전송하기</title>
+<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+<p><strong>아래 카카오톡 아이콘을 눌러 전송하세요</strong> By. Blackcats4567</p>
+<a id="kakao-link-btn" href="javascript:sendLink()">
+  <img
+    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+  />
+</a>
+<script type="text/javascript">
+ Kakao.init('94eb08d3dc9f1cc9df70dbf56374a496');
+  function sendLink() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+       title: '터틀',
+        description: '멍청이',
+        imageUrl:
+          'https://cdn.discordapp.com/attachments/955033405286916126/964717814864810024/KakaoTalk_20220416_114348711.jpg',
+        link: {
+          mobileWebUrl: 'https://qazplmxncbv.github.io',
+          webUrl: 'https://qazplmxncbv.github.io',
+        },
+      },
+      social: {
+        likeCount: , //99999가 최대입니다
+        commentCount: , //99999가 최대입니다
+        sharedCount: , //99999가 최대입니다
+      },
+      buttons: [
+        {
+          title: '현준봇',
+          link: {
+            mobileWebUrl: 'https://qazplmxncbv.github.io',
+            webUrl: 'https://qazplmxncbv.github.io',
+          },
+        },
+      ],
+    })
+  }
+</script>
+<!-- www.blackcats4567.com -->
+<!-- 이미지/버튼 클릭 시 주소는 Kakao Developers의 애플리케이션 > 플랫폼 > Web에 넣어야 클릭했을때 성공적으로 표시됩니다 -->
+  </body>
+</html>
